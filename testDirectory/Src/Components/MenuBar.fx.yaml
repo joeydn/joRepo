@@ -1,0 +1,26 @@
+MenuBar As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =App.Height * 0.15
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(9, 33, 98, 1)
+        BorderThickness: =1
+        Fill: =RGBA(187, 221, 140, 1)
+        Height: =115.19999999999999
+        Width: =1366
+        ZIndex: =1
+
+    Label2 As label:
+        Align: =Align.Center
+        Color: =RGBA(1, 27, 66, 0.93)
+        Font: =Font.Verdana
+        Height: =115
+        Size: =30
+        Text: ="Reusable stuff from within the app"
+        Width: =1366
+        ZIndex: =2
+

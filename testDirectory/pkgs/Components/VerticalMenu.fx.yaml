@@ -1,0 +1,78 @@
+VerticalMenu As CanvasComponent:
+    ActiveColor: =Color.DarkSeaGreen
+    Fill: =RGBA(255, 255, 255, 1)
+    Height: =App.Height * 0.7
+    InactiveColor: =Color.LightGray
+    MenuItems: |-
+        =Table(
+            {
+                MenuText: "Sample Text1",
+                MenuIcon: Icon.EmojiFrown,
+                CurrentScreen: App.ActiveScreen
+            },
+            {
+                MenuText: "Sample Text2",
+                MenuIcon: Icon.EmojiSmile,
+                CurrentScreen: App.ActiveScreen
+            },
+            {
+                MenuText: "Sample Text3",
+                MenuIcon: Icon.EmojiHappy,
+                CurrentScreen: App.ActiveScreen
+            }
+        )
+    Width: =200
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height
+        Items: =VerticalMenu.MenuItems
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(ThisItem.CurrentScreen)
+        TemplatePadding: =0
+        TemplateSize: =157
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Title6 As label:
+            Align: =Align.Center
+            Color: |-
+                =If(
+                    ThisItem.CurrentScreen = App.ActiveScreen, 
+                    VerticalMenu.ActiveColor,
+                    VerticalMenu.InactiveColor
+                )
+            Height: =48
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: =ThisItem.MenuText
+            VerticalAlign: =VerticalAlign.Top
+            Width: =94
+            X: =54
+            Y: =105
+            ZIndex: =1
+
+        Icon2 As icon.Add:
+            Color: |-
+                =If(
+                    ThisItem.CurrentScreen = App.ActiveScreen, 
+                    VerticalMenu.ActiveColor,
+                    VerticalMenu.InactiveColor
+                )
+            Height: =73
+            Icon: =ThisItem.MenuIcon
+            OnSelect: =Select(Parent)
+            Width: =63
+            X: =70
+            Y: =25
+            ZIndex: =4
+

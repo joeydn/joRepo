@@ -1,0 +1,91 @@
+ViewPDFScreen As screen:
+
+    Back As icon.BackArrow:
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(RajEditScreen)
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        DelayItemLoading: =true
+        Items: ='Test Lib Mar 14'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        X: =60
+        Y: =60
+        ZIndex: =1
+
+        Title9 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle6 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'File name with extension'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title9.Y + Title9.Height + 4
+            ZIndex: =2
+
+        NextArrow8 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator9 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
+    PdfViewer2 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =Gallery3.Selected.FileURI
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =540
+        ShowControls: =true
+        Width: =530
+        X: =742
+        Y: =60
+        ZIndex: =2
+
+    Label9 As label:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =138
+        Text: =Gallery3.Selected.Thumbnail.Large
+        Width: =530
+        X: =742
+        Y: =619
+        ZIndex: =3
+

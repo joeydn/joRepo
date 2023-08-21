@@ -1,0 +1,43 @@
+{
+  "c26dec40-ca9f-4849-b122-bb64fc684b9a": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://undermacrohard1.sharepoint.com/sites/ClarkSP": {
+        "dataSources": {
+          "List 6k records": {
+            "tableName": "e2389930-01d5-4b03-a2b4-e20a06f3f388"
+          }
+        }
+      },
+      "https://undermacrohard1.sharepoint.com/sites/VietnamToday": {
+        "dataSources": {
+          "100 Sales Records Test List": {
+            "tableName": "1c8d0f92-10d3-44fc-ba29-15fc0f2fc680"
+          },
+          "Cascading data": {
+            "tableName": "147a480c-da05-41a5-bf29-377a4c88e85c"
+          },
+          "Test Lib Mar 14": {
+            "tableName": "7d6e2e19-3b33-4a3c-aa1e-099b29a45871"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "100 Sales Records Test List",
+      "Test Lib Mar 14",
+      "Cascading data",
+      "List 6k records"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "c26dec40-ca9f-4849-b122-bb64fc684b9a"
+  }
+}

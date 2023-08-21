@@ -1,0 +1,14 @@
+TestComponent As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =App.Height*0.15
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label5 As label:
+        Text: ="Demo"
+        X: =576
+        Y: =52
+        ZIndex: =1
+
